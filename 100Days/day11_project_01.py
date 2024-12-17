@@ -70,7 +70,7 @@ def draw_card(deck):
 
 def get_card_value(card):
     card = str(card)
-    print(type(card))
+    # print(type(card))
     card_value = card_values[card]
     return card_value
 
@@ -136,7 +136,13 @@ def check_first_time_black_jack(dealer_hand, players_dict):
             else:
                 print(f"{player} has BlackJack and wins.")
                 players_dict[player].append("BLACKJACK")
-                players_dict[player][1] += players_dict[player][1] * 1.5
+                players_dict[player][0] += players_dict[player][1] * 1.5
+        # else:
+        #     # if players_dict[player][1] == '1' or players_dict[player][2] == '1':
+        #     match (players_dict[player][2], players_dict[player][2]):
+        #         case ('1', '1'):
+
+            # players_dict[player][2] += players_dict[player][3] # now player can play it with two separate hands
 
 def main():
     while True:
